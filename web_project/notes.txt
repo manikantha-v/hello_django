@@ -1,0 +1,34 @@
+DTL - Django Templet Language
+
+Emmet - Used in autocompletion of certain paratmeters for html, Css etc.
+
+It's better to use POST instead of GET to get the data so that we don't see the result in the address bar.
+
+use csrf token to validate : {% csrf_token %}
+
+MVT - Model View Templet
+
+Model Object - Data from Database
+
+View Object - Where we apply the logic. Which interlinks urls, model, Templet.
+
+Templet - html, css, javascript, DTL
+
+Seperation of Concerns
+
+python manage.py collectstatic - To let Django know that a folder should be created for static files.
+(refer: telusko - Djnago tutorial timestamp : 1:16:37)
+
+{% static %}, {% load static %}
+
+ORM - Object Relational Mapper
+
+python manage.py startapp {{name of the project}}
+
+The migrate command takes all the migrations that haven’t been applied (Django tracks which ones are applied using a special table in your database called django_migrations) and runs them against your database - essentially, synchronizing the changes you made to your models with the schema in the database.
+
+Migrations are very powerful and let you change your models over time, as you develop your project, without the need to delete your database or tables and make new ones - it specializes in upgrading your database live, without losing data. We’ll cover them in more depth in a later part of the tutorial, but for now, remember the three-step guide to making model changes:
+
+    Change your models (in models.py).
+    Run python manage.py makemigrations to create migrations for those changes
+    Run python manage.py migrate to apply those changes to the database.
